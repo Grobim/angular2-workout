@@ -17,7 +17,6 @@ import {HTTP_PROVIDERS} from 'angular2/http';
  * our top level component that holds all of our components
  */
 import {App} from './app/app';
-import {RouterActive} from './app/directives/router-active';
 
 /*
  * Application Providers/Directives/Pipes
@@ -33,8 +32,7 @@ const APPLICATION_PROVIDERS = [
 
 // application_directives: directives that are global through out the application
 const APPLICATION_DIRECTIVES = [
-  ...ROUTER_DIRECTIVES,
-  RouterActive
+  ...ROUTER_DIRECTIVES
 ];
 
 // application_pipes: pipes that are global through out the application
