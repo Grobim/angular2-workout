@@ -6,9 +6,9 @@ import { Hero } from './hero';
 import { OnInit } from 'angular2/core';
 
 @Component({
-  selector     : 'heroes',
-  templateUrl  : 'app/heroes.component.html',
-  styles       : [ require('./heroes.component.scss') ]
+  selector : 'heroes',
+  template : require('./heroes.component.html'),
+  styles   : [ require('./heroes.component.scss') ]
 })
 export class HeroesComponent implements OnInit {
   public heroes: Hero[];
