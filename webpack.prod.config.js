@@ -165,8 +165,55 @@ module.exports = {
       // disable mangling because of a bug in angular2 beta.1, beta.2 and beta.3
       // TODO(mastertinner): enable mangling as soon as angular2 beta.4 is out
       // mangle: { screw_ie8 : true },//prod
-      mangle: false,
-      // prod
+      mangle: {
+        screw_ie8 : true,
+        except: [
+          'AppComponent',
+          'DashboardComponent',
+          'HeaderComponent',
+          'HeroDetailComponent',
+          'HeroesComponent',
+          'RouterLink',
+          'RouterOutlet',
+          'NgFor',
+          'NgIf',
+          'NgClass',
+          'NgSwitch',
+          'NgStyle',
+          'NgSwitchDefault',
+          'NgControl',
+          'NgControlName',
+          'NgControlGroup',
+          'NgFormControl',
+          'NgModel',
+          'NgFormModel',
+          'NgForm',
+          'NgSelectOption',
+          'DefaultValueAccessor',
+          'NumberValueAccessor',
+          'CheckboxControlValueAccessor',
+          'SelectControlValueAccessor',
+          'RadioControlValueAccessor',
+          'NgControlStatus',
+          'RequiredValidator',
+          'MinLengthValidator',
+          'MaxLengthValidator',
+          'PatternValidator',
+          'AsyncPipe',
+          'DatePipe',
+          'JsonPipe',
+          'NumberPipe',
+          'DecimalPipe',
+          'PercentPipe',
+          'CurrencyPipe',
+          'LowerCasePipe',
+          'UpperCasePipe',
+          'SlicePipe',
+          'ReplacePipe',
+          'I18nPluralPipe',
+          'I18nSelectPipe'
+        ] // needed for uglify RouterLink problem
+      },// prod
       compress : { screw_ie8 : true },//prod
       comments: false//prod
 
