@@ -16,7 +16,7 @@ import {HTTP_PROVIDERS} from 'angular2/http';
  * App Component
  * our top level component that holds all of our components
  */
-import {App} from './app/app';
+import {AppComponent} from './app/app.component';
 
 /*
  * Application Providers/Directives/Pipes
@@ -56,7 +56,7 @@ if ('production' === ENV) {
  * our Services and Providers into Angular's dependency injection
  */
 export function main() {
-  return browser.bootstrap(App, [
+  return browser.bootstrap(AppComponent, [
     ...APPLICATION_PROVIDERS,
     ngCore.provide(ngCore.PLATFORM_DIRECTIVES, {useValue: APPLICATION_DIRECTIVES, multi: true}),
     ngCore.provide(ngCore.PLATFORM_PIPES, {useValue: APPLICATION_PIPES, multi: true})
